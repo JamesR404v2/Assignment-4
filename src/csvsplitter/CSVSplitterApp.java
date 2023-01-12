@@ -7,7 +7,7 @@ public class CSVSplitterApp
 
 	public static void main(String[] args) 
 	{
-		{
+	
 			CSVSplitterApp launch = new CSVSplitterApp();
 			System.out.println("app launching");
 //			Go to non-static Heaven.
@@ -15,16 +15,11 @@ public class CSVSplitterApp
 			
 //			((ReadingCSV) launch).readCSV();
 //			don't know why I want to do casting here. So, I'll just do what I know instead.
-			
-
-			
+					
 			
 
 //			
-			
-			
-		}
-		
+				
 		
 	}
 
@@ -36,16 +31,20 @@ public class CSVSplitterApp
 //		instantiate the class that holds the method
 		
 
+
 		
 		ReadingCSV readingCSV = new ReadingCSV();
 		
-		readingCSV.readCSV(String[], Students);
+		String students;
+		String[] studentsFromInputfile = readingCSV.readCSV();
 		// TODO to get correct data into the Array variable, visible in the debugger.
 //		so far I see csvsplitter.ReadingCSV@64f6106c
 		
-		System.out.println("burp");
-		System.out.println("blarp");
-		System.out.println("burp");
+		System.out.println(Arrays.toString(studentsFromInputfile));
+		
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
 		
 	}
 

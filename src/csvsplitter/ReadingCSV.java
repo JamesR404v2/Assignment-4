@@ -10,10 +10,15 @@ import csvsplitter.*;
 public class ReadingCSV 
 {
 // previously I had made this an Abstract Class, however I see no reason why this should be an Abstract Class. We are only going to read the file once. Right? For now, modifying this to be a normal Class.
+	
+	
+
+	
+	
 
 	public String[] readCSV()
 	{
-			String[] array = {"bla","blurp","blguh"};
+			String[] array = new String[] {"bla", "blurp", "blguh"};
 //			
 //	
 //
