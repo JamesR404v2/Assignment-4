@@ -37,7 +37,6 @@ public class CSVSplitterApp
 		
 		String students;
 		String[] studentsFromInputfile = readingCSV.readCSV();
-		// TODO to get correct data into the Array variable, visible in the debugger.
 //		so far I see csvsplitter.ReadingCSV@64f6106c
 		
 		System.out.println(Arrays.toString(studentsFromInputfile));

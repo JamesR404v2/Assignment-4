@@ -19,6 +19,8 @@ public class ReadingCSV
 	public String[] readCSV()
 	{
 			String[] array = new String[] {"bla", "blurp", "blguh"};
+			
+//			TODO: Now uncomment the below and get it to output the file into the array and test printing that.
 //			
 //	
 //
