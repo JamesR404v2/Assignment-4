@@ -3,6 +3,8 @@ package csvsplitter;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.Map;
+import java.util.ArrayList;
 
 public class CSVSplitterApp 
 {
@@ -68,10 +70,21 @@ public class CSVSplitterApp
 
 //    ArraySplitter	| split to 3 arrays on criteria (classroom).
     
-//	ArraySplitter arraySplitter = new ArraySplitter();
-//	arraySplitter.
+		ArraySplitter arraySplitter = new ArraySplitter();
+		Map<String, ArrayList<Student>> courseStudents = arraySplitter.splitStudentsByClass(students);
+
+		System.out.println(courseStudents);
+//		just so it doesn't complain about the unused variable. TODO: to delete these two lines later.
+
+//		TODO: write a unit test for the array splitter.
 		
-		
+//		for (Map.Entry<String, ArrayList<Student>> entry : courseStudents.entrySet()) {
+//		    String course = entry.getKey();
+//		    ArrayList<Student> courseStudentList = entry.getValue();
+//		    System.out.println(course + "Students: " + courseStudentList.size());
+//		}
+
+//		WritingSCV	output to 3 CSV files - this may be where I use Casting.
 		
 
 System.out.println("pause at end");
