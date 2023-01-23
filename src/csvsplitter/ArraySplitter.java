@@ -8,29 +8,25 @@ import csvsplitter.CSVSplitterApp;
 
 public class ArraySplitter {
 
-    public Map<String, ArrayList<Student>> splitStudentsByClass(Student[] students) {
-        Map<String, ArrayList<Student>> courseStudents = splitStudentsByCourse(students);
-        for (Map.Entry<String, ArrayList<Student>> entry : courseStudents.entrySet()) {
-            String course = entry.getKey();
-            ArrayList<Student> courseStudentList = entry.getValue();
-            System.out.println(course + "Students: " + courseStudentList.size());
-        }
-        return courseStudents;
-    }
+	
 
-    public static Map<String, ArrayList<Student>> splitStudentsByCourse(Student[] students) {
-        Map<String, ArrayList<Student>> courseStudents = new HashMap<>();
-        for (Student student : students) {
-            String course = student.getCourse();
-//            This will add the student to the existing array for their course.
-//            If no array exists yet for that course, we'll create the array.
-            if (!courseStudents.containsKey(course)) {
-                courseStudents.put(course, new ArrayList<Student>());
-            }
-            courseStudents.get(course).add(student);
-        }
-        return courseStudents;
-    }
+//	TODO: this code worked, but divided on course - whereas we want to keep students in a different class but same course together.
+	public static Map<String, ArrayList<Student>> splitStudentsByDivider(Student[] students) 
+	{
+	    Map<String, ArrayList<Student>> dividerStudents = new HashMap<>();
+	    for (Student student : students) {
+	        String divider = student.getDivider();
+	        //Add the student to the existing array for their divider.
+	        if (!dividerStudents.containsKey(divider)) {
+	            dividerStudents.put(divider, new ArrayList<Student>());
+	        }
+	        dividerStudents.get(divider).add(student);
+	    }
+	    return dividerStudents;
+	}
+
+
+  
 }
 
 	

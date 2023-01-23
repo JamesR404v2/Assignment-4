@@ -71,10 +71,11 @@ public class CSVSplitterApp
 //    ArraySplitter	| split to 3 arrays on criteria (classroom).
     
 		ArraySplitter arraySplitter = new ArraySplitter();
-		Map<String, ArrayList<Student>> courseStudents = arraySplitter.splitStudentsByClass(students);
+		Map<String, ArrayList<Student>> courseStudents = arraySplitter.splitStudentsByDivider(students);
+		
+//		TODO: Wait for answer on array splitting (currently its creating many arrays instead of three, as the course fields have different numbers after the course name.
+//		https://www.dropbox.com/s/15dkuu9e8w8a171/fleeting_note_1026674227_05.40_23.01.2023.md?dl=0
 
-		System.out.println(courseStudents);
-//		just so it doesn't complain about the unused variable. TODO: to delete these two lines later.
 
 //		TODO: write a unit test for the array splitter.
 		
@@ -86,13 +87,17 @@ public class CSVSplitterApp
 
 //		WritingSCV	output to 3 CSV files - this may be where I use Casting.
 		
+		CSVFileWriter csvFileWriter = new CSVFileWriter();
+		csvFileWriter.csvFileWriting(courseStudents);
 
-System.out.println("pause at end");
-System.out.println("pause at end");
-System.out.println("pause at end");
+		
+		System.out.println("app finished");
+
 
 
 	}
+
+
 
 
 }
