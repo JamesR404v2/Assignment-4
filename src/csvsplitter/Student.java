@@ -9,7 +9,7 @@ public class Student
 	private int grade;
 	String stringStudentID;
 	String stringGrade;
-	String divider;
+	String courseName;
 	
 	
 	public Student(String stringStudentID, String studentName, String course, String stringGrade) 
@@ -24,9 +24,9 @@ public class Student
 //			add Divider based on Course. (tempted to call it Class, but that'll be too confusing)
 			// Extract the first word of the course name
 	        int index = course.indexOf(" ");
-	        String divider = course.substring(0, index);
+	        String courseName = course.substring(0, index);
 	        // Set the divider to the student's object
-	        this.divider = divider;
+	        this.courseName = courseName;
 			
 			
 		}
@@ -63,12 +63,12 @@ public class Student
 
 	void setDivider(String divider)
 	{
-	this.divider = divider;
+	this.courseName = divider;
 	}
 	
 	String getDivider()
 	{
-		return divider; 
+		return courseName; 
 	}
 	
 	

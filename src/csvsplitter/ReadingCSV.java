@@ -62,7 +62,7 @@ public class ReadingCSV
 						if (bufferedReader != null)
 							bufferedReader.close();
 					}
-					System.out.println(students[3].toString());
+//					System.out.println(students[3].toString());
 					return students;
 					
 				

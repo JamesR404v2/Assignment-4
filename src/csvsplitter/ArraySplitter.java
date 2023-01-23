@@ -10,8 +10,8 @@ public class ArraySplitter {
 
 	
 
-//	TODO: this code worked, but divided on course - whereas we want to keep students in a different class but same course together.
-	public static Map<String, ArrayList<Student>> splitStudentsByDivider(Student[] students) 
+//	
+	public Map<String, ArrayList<Student>> splitStudentsByDivider(Student[] students) 
 	{
 	    Map<String, ArrayList<Student>> dividerStudents = new HashMap<>();
 	    for (Student student : students) {
